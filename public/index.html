@@ -4,11 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Web Chat</title>
 </head>
 <body>
-    <h1>Welcome to web chat</h1>
+    <div class="main_container">
+        <div class="dashboard_container">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div>
+                <div class="description_container">
+                    <p class="description_container_paragraph">Talk with other user by passing your personal code</p>
+                </div>
+                <div class="personal_code_container">
+                    <div class="personal_code_title-container">
+                        <p class="personal_code_title_paragraph">
+                            Your personal code
+                        </p>
+                    </div>
+                    <div class="personal_code_value_container">
+                        <p class="personal_code_value_paragraph" id="personal_code_paragraph">
+                            alisson
+                        </p>
+                        <button class="personal_code_copy_button" id="personal_code_copy_button">
+                            <img src="./images/copyButton.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="personal_code_connecting_container">
+                    <p class="personal_code_connecting_paragraph">Personal Code</p>
+                    <div class="personal_code_connecting_input_container">
+                        <input type="text" class="personal_code_input" id="personal_code_input"/>
+                    </div>
+                    <div class="personal_code_connecting_buttons_container">
+                        <button class="connecting_button" id="personal_code_chat_button">
+                            <img src="images/chatButton.png" class="connecting_buttons_image" alt="">
+                        </button>
+                        <button class="connecting_button" id="personal_code_video_button">
+                            <img src="images/videoButton.png" class="connecting_buttons_image" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="stranger_connecting_container">
+                    <p class="stranger_title_container">Stranger</p>
+                    <div class="stranger_buttons_container">
+                        <button class="connecting_button" id="stranger_chat_button">
+                            <img src="images/chatButton.png" class="connecting_buttons_image" alt="">
+                        </button>
+                        <button class="connecting_button" id="stranger_video_button">
+                            <img src="images/videoButton.png" class="connecting_buttons_image" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="checkbox_container">
+                    <div class="checkbox_connection" id="allow_strangers_checkbox">
+                        <img src="images/check.png" class="display_none" id="allow_strangers_checkbox_image" alt="" />
+                    </div>
+                    <p class="checkbox_container_paragraph">Allow connections from strangers</p>
+                </div>
+            </div>
+        </div>
+        <div class="call_container"></div>
+        <div class="messenger_container"></div>
+    </div>
+    
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js" type="module"></script>
 </body>
