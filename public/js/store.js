@@ -49,3 +49,5 @@ export const setRemoteStream = (remoteStream) => {
         remoteStream: remoteStream
     }
 }
+
+export const getState = () => state
