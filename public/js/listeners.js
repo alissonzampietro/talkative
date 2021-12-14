@@ -29,12 +29,16 @@ export const codeChatButton = function(store) {
     const personalCodeVideoButton = document.getElementById('personal_code_video_button');
 
     personalCodeChatButton.addEventListener('click', () => {
-        startPreOffer(document.getElementById('personal_code_input').value).setType(constants.callType.CHAT_PERSONAL_CODE).send()
+        startPreOffer(document.getElementById('personal_code_input').value)
+            .setType(constants.callType.CHAT_PERSONAL_CODE)
+            .send()
         console.log('chat button clicked');
     });
 
     personalCodeVideoButton.addEventListener('click', () => {
-        startPreOffer(document.getElementById('personal_code_input').value).setType(constants.callType.VIDEO_PERSONAL_CODE).send()
+        startPreOffer(document.getElementById('personal_code_input').value)
+            .setType(constants.callType.VIDEO_PERSONAL_CODE)
+            .send()
         console.log('video button clicked');
     });
 }
